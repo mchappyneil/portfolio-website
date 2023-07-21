@@ -38,7 +38,8 @@
     animation-delay: 1s;
 }
 
-.about-page {
+.about-page,
+.contact-page {
   
     h1 {
       font-size: 73px;
@@ -91,6 +92,10 @@
       }
       &:nth-of-type(3) {
         animation-delay: 1.3s;
+      }
+    
+      a {
+        color: #fff;
       }
     }
 

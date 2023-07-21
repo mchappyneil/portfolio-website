@@ -2,7 +2,7 @@ import './index.scss'
 import { useState, useEffect } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDocker, faGitAlt, faGolang, faJava, faJsSquare, faPython } from '@fortawesome/free-brands-svg-icons'
+import { faDocker, faGitAlt, faGolang, faJsSquare, faPython, faReact } from '@fortawesome/free-brands-svg-icons'
 
 const About = () => {
     const aboutStrArr = "About Me".split("")
@@ -16,7 +16,7 @@ const About = () => {
     }, []);
 
     return (
-        <div className='container about-page'>
+            <div className='container about-page'>
             <div className='text-zone'>
                 <h1>
                     <AnimatedLetters
@@ -51,26 +51,26 @@ const About = () => {
             <div className='stage-cube-cont'>
                 <div className='cubespinner'>
                     <div className='face1'>
-                        <FontAwesomeIcon icon={faGitAlt} color='#f05134'/>
+                        <FontAwesomeIcon icon={faGitAlt} color='#ec4d28'/>
                     </div>
                     <div className='face2'>
-                        <FontAwesomeIcon icon={faGolang} color='#f05134'/>
+                        <FontAwesomeIcon icon={faGolang} color='#00acd7'/>
                     </div>
                     <div className='face3'>
-                        <FontAwesomeIcon icon={faPython} color='#f05134'/>
+                        <FontAwesomeIcon icon={faPython} color='#9d07a4'/>
                     </div>
                     <div className='face4'>
-                        <FontAwesomeIcon icon={faJava} color='#f05134'/>
+                        <FontAwesomeIcon icon={faReact} color='#5ed4f4'/>
                     </div>
                     <div className='face5'>
-                        <FontAwesomeIcon icon={faDocker} color='#f05134'/>
+                        <FontAwesomeIcon icon={faDocker} color='#2496ed'/>
                     </div>
                     <div className='face6'>
-                        <FontAwesomeIcon icon={faJsSquare} color='#f05134'/>
+                        <FontAwesomeIcon icon={faJsSquare} color='#efd81d'/>
                     </div>
                 </div>
             </div>
-        </div>
+            </div>
     )
 }
 
