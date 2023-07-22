@@ -4,6 +4,8 @@ import Layout from './components/Layout'
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
+import Photography from './components/Photography';
+import Dashboard from './components/Dashboard';
 function App() {
   return (
     <>
@@ -12,6 +14,8 @@ function App() {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="photography" element={<Photography />} />
+        <Route path="dashboard" element={<Dashboard />} />
       </Route>
     </Routes>
     </>

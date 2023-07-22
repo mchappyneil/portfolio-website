@@ -1,8 +1,8 @@
 .info-map {
     position: absolute;
     background-color: #000;
-    top: 50px;
-    right: 10%;
+    top: 250px;
+    right: 12%;
     z-index: 9999;
     width: 267px;
     padding: 20px;
@@ -30,5 +30,32 @@
         width: 75%;
         top: -10%;
         height: 120%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .contact-page {
+        .text-zone {
+            h1 {
+                font-size: 45px;
+                margin-left: 20px;
+                margin-top: 20px; 
+            }
+        }
+    }
+
+    .location-img {
+        width: 450px;
+        height: 200px;
+        
+        .location {
+            z-index: 3;
+            position: initial;
+            margin-left: 6%;
+        }
+    }
+
+    .info-map {
+        display: none;
     }
 }

@@ -38,8 +38,9 @@
     animation-delay: 1s;
 }
 
-.about-page,
-.contact-page {
+.container.about-page,
+.container.contact-page,
+.container.photography-page {
   
     h1 {
       font-size: 73px;
@@ -113,6 +114,40 @@
   .text-animate-hover {
     &:hover {
       color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+
+  .page {
+    position: initial;
+  }
+
+  .container {
+    position: initial;
+    height: auto;
+    min-height: auto;
+
+    &.about-page,
+    &.contact-page,
+    &.photography-page {
+
+      .text-zone {
+        position: initial;
+        transform: none;
+        width: 100%;
+        display: block;
+        padding: 20px;
+        box-sizing: border-box;
+
+        p {
+          font-size: 15px;
+        }
+        br {
+          display: none;
+        }
+      }
     }
   }
 }
