@@ -4,7 +4,7 @@ import LogoN from '../../assets/images/n-logo-dualtone-big.png'
 import LogoSubtitle from '../../assets/images/name-logo-sub.png'
 import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faUser, faEnvelope, faCameraAlt, faBars, faClose } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faUser, faEnvelope, faCameraAlt, faBars, faClose, faCodeBranch } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { useState } from 'react'
 
@@ -65,6 +65,18 @@ const Sidebar = () => {
                     icon={faEnvelope} 
                     color="#4d4d4e" 
                 />
+            </NavLink>
+            <NavLink
+                onClick={() => setShowNav(false)} 
+                exact="true" 
+                activeclassname="active"
+                className="skills-link"
+                to="/skills"
+            >
+                <FontAwesomeIcon 
+                    icon={faCodeBranch} 
+                    color="#4d4d4e"
+                    />
             </NavLink>
             <FontAwesomeIcon
                 onClick={() => setShowNav(false)} 
