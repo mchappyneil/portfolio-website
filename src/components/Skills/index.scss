@@ -1,7 +1,96 @@
-.scroll-container {
+body {
+    height: 100vh;
+  }
+  
+  #two {
+    background: #1d1f2a;
+    height: 100%;
+    display: flex;
+    position:absolute;
+    right: 200px;
+    top: 350px;
+    color: #89FFCC;
+    font-size: 40px;
+    font-family: "Coolvetica";
+  }
+  
+  .scroll-container {
+      color: #89FFCC;
+      font-size: 40px;
+      height: 45px;
+      overflow: hidden;
+      position: relative;
+      right: 0px;
+  }
+  .scroll-container::before {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    content: '';
+    height: 15px;
     position: absolute;
-    right: 10%;
-    overflow: hidden;
-    bottom: 250px;
-    height: 50%;
-}
+    background: linear-gradient(180deg, #1d1f2a, rgba(35, 37, 51, 0));
+ }
+  .scroll-container::after {
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    content: '';
+    height: 10px;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(35, 37, 51, 0), #1d1f2a);
+  }
+
+  .speak {
+    float: left;
+  }
+  
+  ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+    -webkit-animation: scrollUp 30s ease-in-out infinite normal;
+            animation: scrollUp 30s ease-in-out infinite normal;
+  }
+  ul li {
+    opacity: 1;
+    height: 20px;
+    padding: 10px;
+    list-style: none;
+  }
+  
+  @-webkit-keyframes scrollUp {
+    from {
+      -webkit-transform: translateY(-10px);
+              transform: translateY(-10px);
+    }
+    to {
+      -webkit-transform: translateY(-96.8%);
+              transform: translateY(-96.8%);
+    }
+  }
+  
+  @keyframes scrollUp {
+    from {
+      -webkit-transform: translateY(-10px);
+              transform: translateY(-10px);
+    }
+    to {
+      -webkit-transform: translateY(-96.8%);
+              transform: translateY(-96.8%);
+    }
+  }
+
+  button {
+      border: none;
+      background-color: #1d1f2a;
+      cursor:pointer;
+      font-size: 20px;
+      color: #fff;
+  }
+
+  button:hover {
+      color:#726ADC
+  }

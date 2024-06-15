@@ -66,7 +66,7 @@ const Sidebar = () => {
                     color="#4d4d4e" 
                 />
             </NavLink>
-            {/* <NavLink
+            <NavLink
                 onClick={() => setShowNav(false)} 
                 exact="true" 
                 activeclassname="active"
@@ -77,7 +77,7 @@ const Sidebar = () => {
                     icon={faCodeBranch} 
                     color="#4d4d4e"
                     />
-            </NavLink> */}
+            </NavLink>
             <FontAwesomeIcon
                 onClick={() => setShowNav(false)} 
                 icon={faClose}

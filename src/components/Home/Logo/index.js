@@ -1,5 +1,5 @@
 import './index.scss';
-import Self from '../../../assets/images/self-recent-cropped.png'
+import Self from '../../../assets/images/self_2024_coloured.jpg'
 import { useRef } from 'react'
 
 const Logo = () => {    
