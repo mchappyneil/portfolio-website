@@ -26,10 +26,12 @@ const Contact = () => {
                     />
                 </h1>
                 <p>
-                    Currently, I am still completing my undergrad, which means I'm not
-                    available for full-time developer roles at the moment. However, please
-                    feel free to reach out if you have any tech-related questions or just want
-                    to chat about my other passions - I'm always up for engaging discussions! 
+                    As I complete my last semester of my degree, I'm excited to announce 
+                    that I'm open to any full-time developer positions! If you have any
+                    opportunities that align with my skills and interests, I'd love to 
+                    hear from you. Please also feel free to reach out if you have any 
+                    tech-related questions or just want to chat about my other passions 
+                    - I'm always up for engaging discussions!
                 </p>
                 <br />
                 <p>
