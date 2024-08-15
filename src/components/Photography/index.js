@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AnimatedLetters from "../AnimatedLetters";
 import "./index.scss";
-import { getDocs, collection } from "firebase/firestore/lite";
+import { getDocs, collection, query, orderBy } from "firebase/firestore/lite";
 import { db } from '../../firebase'
 
 const Photography = () => {
@@ -21,7 +21,8 @@ const Photography = () => {
     }, [])
 
     const getPhoto = async () => {
-        const queryThumbnail = await getDocs(collection(db, 'photography'));
+        const photosRef = query(collection(db, 'photography'), orderBy('position'));
+        const queryThumbnail = await getDocs(photosRef);
         setPhoto(queryThumbnail.docs.map((doc) => doc.data()));
     }
     
@@ -35,7 +36,7 @@ const Photography = () => {
                                 <img 
                                 src={pic.image}
                                 className="photography-img"
-                                alt="first" 
+                                alt="" 
                                 />
                                 <div className="content">
                                     <p className="title">{pic.name}</p>
