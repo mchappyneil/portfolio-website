@@ -25,21 +25,30 @@ const Skills = () => {
                     />
                 </h1>
                 <p>
-                I'm an ever-learning tech enthusiast with a strong passion for programming. 
-                With a solid 6-year journey in Python, 4 years working with Golang and JavaScript, 
-                I've been around the block in various domains of software development.
+                    As a software engineer, I'm proficient in building scalable, maintainable, and 
+                    efficient applications using a variety of languages including Python, Go, 
+                    JavaScript, HTML, and many others. I'm also a strong advocate for using modern 
+                    technologies and best practices when writing code.
                 </p>
                 <p>
-                My professional journey includes a year-long Co-Op placement at KOHO Financial, 
-                where I played a pivotal role as a backend software developer.
-                Before that, I had a blast teaching kids the magic of coding at Code Ninjas as a part time 
-                Coding Instructor.
+                    My professional journey includes a year-long Co-Op placement at KOHO Financial, 
+                    where I used my skills as a Backend Software Developer to solve a wide variety
+                    of problems. Some of my major achievements while working at KOHO include optimizing
+                    database migration and user data backfill processes by building custom internal
+                    tools, as well as collaborating with cross-functional teams to release 3 deliverables
+                    on-time, leading to an increase in customer-base by over 200,000.
                 </p>
                 <p>
-                On top of everything else, I've got a bunch of cool personal projects to show for; 
-                from this website you're on right now, to the "person service" project I built during my coop, 
-                and even a social media platform I built back in high school! 
-                You can find most of them on my <a href="https://github.com/mchappyneil/About_Me">GitHub!</a>
+                    Before that, I worked at Code Ninjas as a part time Coding Instructor, where I 
+                    designed and led the FIRST LEGO Robotics competition team and Python program, 
+                    leading to marked improvement in our students' coding proficiency, problem-solving 
+                    skills, and teamwork!
+                </p>
+                <p>
+                On top of everything else, I've got a bunch of personal projects to show for: some of them 
+                deployed, such as this website you're on right now, to a <a href="https://melodia-streamer.netlify.app/#"> proof of concept music streaming service</a>,
+                and a <a href="https://tick.up.railway.app">todo-list manager</a>. The rest of my non-hosted
+                projects can be found on my <a href="https://github.com/mchappyneil/About_Me">GitHub!</a>
                 </p>
                 <p>
                 If you're interested in more of my professional experience, you can find the most recent

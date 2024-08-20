@@ -42,6 +42,18 @@ const Sidebar = () => {
                     color="#4d4d4e"
                 />
             </NavLink>
+            <NavLink
+                onClick={() => setShowNav(false)} 
+                exact="true" 
+                activeclassname="active"
+                className="skills-link"
+                to="/skills"
+            >
+                <FontAwesomeIcon 
+                    icon={faCodeBranch} 
+                    color="#4d4d4e"
+                    />
+            </NavLink>
             <NavLink 
                 onClick={() => setShowNav(false)}
                 exact="true" 
@@ -65,18 +77,6 @@ const Sidebar = () => {
                     icon={faEnvelope} 
                     color="#4d4d4e" 
                 />
-            </NavLink>
-            <NavLink
-                onClick={() => setShowNav(false)} 
-                exact="true" 
-                activeclassname="active"
-                className="skills-link"
-                to="/skills"
-            >
-                <FontAwesomeIcon 
-                    icon={faCodeBranch} 
-                    color="#4d4d4e"
-                    />
             </NavLink>
             <FontAwesomeIcon
                 onClick={() => setShowNav(false)} 
