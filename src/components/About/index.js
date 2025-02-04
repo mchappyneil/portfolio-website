@@ -26,25 +26,24 @@ const About = () => {
                     />
                 </h1>
                 <p>
-                    Hey there! I'm a student at the University of Toronto pursuing a double 
-                    major in Mathematics and Computer Science. As an enthusiastic developer 
+                    Hey there! I'm a graduate of the University of Toronto, where I completed 
+                    a double major in Computer Science and Math. As an enthusiastic developer 
                     and learner, I feel at ease working in both frontend and backend 
                     environments, although my experience leans more towards the backend.
                 </p>
                 <br />
                 <p>
-                    I'm on the lookout for a position at an established company that's ready 
+                    I'm on the lookout for a position at a company that's ready 
                     to make a mark in the tech landscape with their groundbreaking products or 
                     services. I'm passionate about leveraging technology to positively impact 
                     people's lives and make a meaningful difference in the world.
                 </p>
                 <br />
                 <p>
-                    When it comes to my personality, you'll find me to be curious, amicable, 
-                    and resourceful. I'm always eager to learn and collaborate with others to 
-                    achieve the best results. In my downtime, you'll catch me indulging in 
-                    various hobbies, including playing video games, skateboarding, exploring 
-                    new books, and capturing moments through photography.
+                    I'm curious, amicable, and resourceful. I'm always eager to learn and 
+                    collaborate with others to achieve the best results. In my downtime, I
+                    practice photography, watch sports, read, and stay active through
+                    skateboarding and snowboarding.
                 </p>
             </div>
 

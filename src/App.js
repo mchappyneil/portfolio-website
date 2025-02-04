@@ -5,6 +5,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
 import Photography from './components/Photography';
+import CollectionPage from './components/Collections';
 import Dashboard from './components/Dashboard';
 import Skills from './components/Skills'
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="photography" element={<Photography />} />
+        <Route path="/collection/:collectionName" element={<CollectionPage />} />
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="skills" element={<Skills />} />
       </Route>

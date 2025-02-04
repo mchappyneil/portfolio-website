@@ -25,18 +25,10 @@ const Skills = () => {
                     />
                 </h1>
                 <p>
-                    As a software engineer, I'm proficient in building scalable, maintainable, and 
-                    efficient applications using a variety of languages including Python, Go, 
-                    JavaScript, HTML, and many others. I'm also a strong advocate for using modern 
-                    technologies and best practices when writing code.
-                </p>
-                <p>
-                    My professional journey includes a year-long Co-Op placement at KOHO Financial, 
-                    where I used my skills as a Backend Software Developer to solve a wide variety
-                    of problems. Some of my major achievements while working at KOHO include optimizing
-                    database migration and user data backfill processes by building custom internal
-                    tools, as well as collaborating with cross-functional teams to release 3 deliverables
-                    on-time, leading to an increase in customer-base by over 200,000.
+                    My professional experience includes year-long internship at KOHO, where I had the chance to apply my 
+                    technical expertise as a Backend Engineer on a variety of projects, chief amongst which included 
+                    assisting in the design and implementation of a revamped subscription tier system for the company. 
+                    Currently, I work for the University of Toronto as a Mathematics Teaching Assistant.
                 </p>
                 <p>
                     Before that, I worked at Code Ninjas as a part time Coding Instructor, where I 
@@ -45,10 +37,10 @@ const Skills = () => {
                     skills, and teamwork!
                 </p>
                 <p>
-                On top of everything else, I've got a bunch of personal projects to show for: some of them 
-                deployed, such as this website you're on right now, to a <a href="https://melodia-streamer.netlify.app/#"> proof of concept music streaming service</a>,
-                and a <a href="https://tick.up.railway.app">todo-list manager</a>. The rest of my non-hosted
-                projects can be found on my <a href="https://github.com/mchappyneil/About_Me">GitHub!</a>
+                    I enjoy building side projects that reflect my hobbies or allow me to explore and learn about
+                    new topics that I find interesting. For example: this website, an AI model using
+                    the GAN architecture capable of image-to-image artistic style transfer, and many others - which
+                    can be found on my <a href="https://github.com/mchappyneil/About_Me">GitHub!</a>
                 </p>
                 <p>
                 If you're interested in more of my professional experience, you can find the most recent
