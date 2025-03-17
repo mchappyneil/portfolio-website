@@ -1,6 +1,6 @@
 // src/components/ProjectCarousel.js
 "use client"; // Client-side component for GSAP animations and interactivity
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 
 const projects = [
@@ -42,34 +42,121 @@ const projects = [
 ];
 
 export default function ProjectCarousel() {
-  const carouselRef = useRef(null);
-
-  useEffect(() => {
-    // Slowly rotate the carousel container
-    gsap.to(carouselRef.current, {
-      rotate: 360,
-      duration: 60,
-      ease: "none",
-      repeat: -1,
-    });
-  }, []);
-
-  return (
-    <div ref={carouselRef} className="relative overflow-hidden">
-      <div className="flex justify-center space-x-8">
-        {projects.map((project, index) => (
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const slidesRef = useRef(null);
+    const cardRef = useRef(null);
+  
+    // Auto-slide every 4 seconds
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setCurrentIndex((prevIndex) =>
+          prevIndex === projects.length - 1 ? 0 : prevIndex + 1
+        );
+      }, 4000);
+  
+      return () => clearInterval(interval);
+    }, []);
+  
+    // Animate slide transition when currentIndex changes
+    useEffect(() => {
+      if (!slidesRef.current) return;
+  
+      const slideWidth = 600; // card width
+      const newX = -currentIndex * slideWidth;
+  
+      gsap.to(slidesRef.current, {
+        x: newX,
+        duration: 0.8,
+        ease: "power2.out",
+      });
+    }, [currentIndex]);
+  
+    // Tilt effect on hover
+    const handleMouseMove = (e) => {
+      if (!cardRef.current) return;
+  
+      const rect = cardRef.current.getBoundingClientRect();
+      const cardWidth = rect.width;
+      const cardHeight = rect.height;
+      const centerX = rect.left + cardWidth / 2;
+      const centerY = rect.top + cardHeight / 2;
+      const mouseX = e.clientX - centerX;
+      const mouseY = e.clientY - centerY;
+  
+      // Scale factor for how much tilt you want
+      const rotateMax = 10; // degrees
+  
+      const rotateY = (mouseX / cardWidth) * rotateMax;
+      const rotateX = -(mouseY / cardHeight) * rotateMax;
+  
+      gsap.to(cardRef.current, {
+        rotateY,
+        rotateX,
+        duration: 0.3,
+        ease: "power2.out",
+      });
+    };
+  
+    const handleMouseLeave = () => {
+      // Reset tilt
+      gsap.to(cardRef.current, {
+        rotateY: 0,
+        rotateX: 0,
+        duration: 0.3,
+        ease: "power2.out",
+      });
+    };
+  
+    return (
+      <div className="relative w-full flex flex-col items-center">
+        {/* Carousel Wrapper */}
+        <div
+          className="overflow-hidden border dark:border-gray-700 rounded"
+          style={{ width: "600px", height: "350px" }}
+        >
+          {/* Slides Container */}
           <div
-            key={index}
-            className="p-4 border rounded hover:shadow-lg transition-all cursor-pointer transform hover:scale-105"
-            onClick={() => window.open(project.link, "_blank")}
-            title={`${project.name}\n${project.startDate} - ${project.endDate}\n${project.description}\nTech: ${project.techStack}`}
+            ref={slidesRef}
+            className="flex"
+            style={{ width: `${projects.length * 600}px` }}
           >
-            <h3 className="font-bold">{project.name}</h3>
-            <p className="text-xs">{project.startDate} - {project.endDate}</p>
-            {/* Optionally show more details on hover using CSS tooltips or additional GSAP animations */}
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className="w-[600px] h-[350px] flex items-center justify-center p-4"
+              >
+                {/* Card */}
+                <div
+                  ref={index === currentIndex ? cardRef : null}
+                  className="relative w-full h-full bg-white dark:bg-gray-800 text-black dark:text-gray-100 
+                             rounded-lg shadow-lg cursor-pointer transform transition-transform 
+                             hover:scale-105"
+                  onMouseMove={index === currentIndex ? handleMouseMove : null}
+                  onMouseLeave={index === currentIndex ? handleMouseLeave : null}
+                  onClick={() => window.open(project.link, "_blank")}
+                >
+                  {/* Project Title */}
+                  <h3 className="text-xl font-bold absolute top-4 left-4">
+                    {project.name}
+                  </h3>
+                  <p className="text-xs absolute top-4 right-4">
+                    {project.startDate} - {project.endDate}
+                  </p>
+  
+                  {/* Reveal on hover (description & tech) */}
+                  <div
+                    className="absolute bottom-4 left-4 right-4 opacity-0 hover:opacity-100 
+                               transition-opacity duration-300 bg-white/80 dark:bg-black/40 
+                               rounded p-2"
+                  >
+                    <p className="text-sm">{project.description}</p>
+                    <p className="text-xs italic mt-1">{project.techStack}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
-    </div>
-  );
-}
+    );
+  }

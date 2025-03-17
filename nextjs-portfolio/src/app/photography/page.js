@@ -1,8 +1,8 @@
 // src/app/photography/page.js
-"use client"; // This is a client component because we’re using useEffect and state
-import { useEffect, useState } from "react";
-import { collection, getDocs, query, orderBy } from "firebase/firestore";
-import { db } from "../../lib/firebase";
+'use client' // This is a client component because we’re using useEffect and state
+import { useEffect, useState } from 'react'
+import { collection, getDocs, query, orderBy } from 'firebase/firestore/lite'
+import { db } from '../../lib/firebase'
 
 export default function PhotographyPage() {
   const [groupedPhotos, setGroupedPhotos] = useState({});
@@ -46,10 +46,10 @@ export default function PhotographyPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {groupedPhotos[groupName].map((photo) => (
               <div key={photo.id} className="border rounded overflow-hidden hover:shadow-lg transition">
-                <img 
-                  src={photo.image} 
-                  alt={photo.name} 
-                  className="w-full h-48 object-cover" 
+                <img
+                  src={photo.image}
+                  alt={photo.name}
+                  className="w-full h-48 object-cover"
                 />
                 <div className="p-4">
                   <h3 className="font-bold">{photo.name}</h3>
