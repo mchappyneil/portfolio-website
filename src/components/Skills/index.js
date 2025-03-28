@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
-import Resume from "../../assets/pdf/Neil Mehta Resume August 2024.pdf"
+import Resume from "../../assets/pdf/Resume.pdf"
 import './index.scss'
 
 const Skills = () => {
