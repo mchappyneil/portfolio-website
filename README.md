@@ -1,9 +1,9 @@
 # About This Repo
 
-This repo hosts the code for my initial personal website. I have since rebuilt the website from the ground up, making this code no longer relevant. So I decided to make it public to show the behind the scenes of how (most of) it worked! Feel free to use it as inspiration* :)
+This repo hosts the code for my initial personal website. I have since rebuilt the website from the ground up, making this code no longer relevant. So I decided to archive and publicize it to show the behind the scenes of how (most of) it worked! Feel free to use it as inspiration* :)
 
 
-#### *A lot of directories and files were removed or altered in order to protect my privacy, so if you encounter any import errors or other issues I'm sorry about that! 
+#### *A lot of directories and files were removed or altered in order to protect my privacy, so downloading the code will result in several different kinds of errors! 
 This project was created using `create-react-app`.
 
 ## Available Scripts
