@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# About This Repo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repo hosts the code for my initial personal website. I have since rebuilt the website from the ground up, making this code no longer relevant. So I decided to make it public to show the behind the scenes of how (most of) it worked! Feel free to use it as inspiration* :)
+
+
+#### *A lot of directories and files were removed or altered in order to protect my privacy, so if you encounter any import errors or other issues I'm sorry about that! 
+This project was created using `create-react-app`.
 
 ## Available Scripts
 
